@@ -10,12 +10,12 @@ This project demonstrates a complete data analyst workflow: API extraction, data
 
 The goal of this project is to simulate a real-world analytics pipeline by working with live earthquake data.  
 The pipeline follows standard ETL practices:
+- Extract data from a public API (USGS Earthquake API)
+- Validate data quality (nulls, duplicates, data types)
+- Transform raw data into a clean, analysis-ready format
+- Analyze patterns using exploratory data analysis (EDA)
+- Classify events by severity to make the data more actionable
 
-1. **Extract** data from a public API (USGS Earthquake API)
-2. **Validate** data quality (nulls, duplicates, data types)
-3. **Transform** raw data into a clean, analysis-ready format
-4. **Analyze** patterns using exploratory data analysis (EDA)
-5. **Classify** events by severity to make the data more actionable
 
 ---
 
@@ -33,16 +33,17 @@ The pipeline follows standard ETL practices:
 ---
 
 ## 🔄 Pipeline Flow
-USGS API
-↓
-Extract (Python script)
-↓
-Raw CSV (data/raw)
-↓
-Validation & Transformation (Jupyter)
-↓
-Processed CSV (analysis-ready)
-↓
+
+USGS API  
+↓  
+Extract (Python script)  
+↓  
+Raw CSV  
+↓  
+Validation & Transformation (Jupyter)  
+↓  
+Analysis-ready Dataset  
+↓  
 EDA + Severity Classification
 
 ## 📁 Project Structure
@@ -117,9 +118,9 @@ To make the dataset more actionable, a rule-based severity classification was ad
 
 | Severity | Magnitude Range |
 |--------|----------------|
-| Low | < 4.0 |
-| Medium | 4.0 – 5.5 |
-| High | ≥ 5.5 |
+| Low    | < 4.0          |
+| Medium | 4.0 – 5.5      |
+| High   | ≥ 5.5          |
 
 This classification allows non-technical stakeholders to quickly identify critical events.
 
@@ -140,6 +141,12 @@ An optional step demonstrates how AI can be integrated into analytics workflows 
 1. Clone the repository:
    ```bash
    git clone https://github.com/YOUR_USERNAME/earthquake-etl-pipeline.git
+  
+   pip install -r requirements.txt
+
+   python extract/extract_earthquakes.py
+
+    notebooks/test.ipynb
 
 📌 Key Takeaways
 
@@ -152,3 +159,9 @@ Shows how raw data becomes analysis-ready
 Bridges technical analysis with business-friendly categorization
 
 Uses clean project organization and version control
+
+```markdown
+## 👤 Author
+Javier Garcia  
+Aspiring Data Analyst | Python | SQL | Data Pipelines
+
